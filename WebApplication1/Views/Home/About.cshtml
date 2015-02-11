@@ -1,6 +1,10 @@
-﻿@{
+﻿@using System
+@{
     ViewBag.Title = "About";
 }
+<p>No cacheado</p>
+<h1>About @DateTime.Now.ToLongTimeString()</h1>
+<p>Cacheado</p>
 @Html.Action("Information2")
 
 <h2>@ViewBag.Title.</h2>

@@ -1,9 +1,14 @@
-﻿@{
+﻿@using System
+@{
     ViewBag.Title = "Contact";
 }
-@Html.Action("Information", true)
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
+
+<p>Cacheado</p>
+<h1>About @DateTime.Now.ToLongTimeString()</h1>
+<p>Cacheado</p>
+@Html.Action("Information2")
 
 <address>
     One Microsoft Way<br />

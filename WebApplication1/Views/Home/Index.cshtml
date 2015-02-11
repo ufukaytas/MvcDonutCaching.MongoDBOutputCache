@@ -1,6 +1,10 @@
-﻿@{
+﻿@using System
+@{
     ViewBag.Title = "Home Page";
 }
+<p>Cacheado</p>
+<h1>@DateTime.Now.ToLongTimeString()</h1>
+<p>No cacheado, excluido de la cache padre, esto es "cachear el donut"</p>
 @Html.Action("Information", true)
 <div class="jumbotron">
     <h1>ASP.NET</h1>

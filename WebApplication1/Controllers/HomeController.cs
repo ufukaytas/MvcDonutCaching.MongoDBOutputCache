@@ -11,7 +11,7 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        [DonutOutputCache(Duration = 180, Location = OutputCacheLocation.Server)]
+        [DonutOutputCache(Duration = 10, Location = OutputCacheLocation.Server)]
         public ActionResult Index()
         {
             return View();
@@ -23,20 +23,20 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-
+        
         public PartialViewResult Information()
         {
             return PartialView();
         }
 
 
-        [DonutOutputCache(Duration = 60)]
+        [DonutOutputCache(Duration = 5)]
         public PartialViewResult Information2()
         {
             return PartialView();
         }
 
-        [DonutOutputCache(Duration = 15, Location = OutputCacheLocation.Server)]
+        [DonutOutputCache(Duration = 10, Location = OutputCacheLocation.Server)]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
